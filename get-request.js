@@ -15,8 +15,10 @@ const intervalTime = parseInt(process.argv[4]);
 
 function loop(){
 	setTimeout(() => {
+		options.path = `/?bid=test${Math.random() * 10000000 + 10000}&pid=test${Math.random() * 10000000 + 10000}`;
 		let request = https.request( options , (res) => {
 			console.log(`Status: ${res.statusCode} , Count: ${++count}`);
+			//console.log(options.path);
 			if(count < limit){
 				loop();
 			}
