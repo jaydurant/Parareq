@@ -11,7 +11,7 @@ const options = {
 
 let count = 0;
 const limit = parseInt(process.argv[3]);
-const intervalTime = Number(process.argv[4]) ? parseInt(process.argv[4]) : 	Math.ceil((Math.random() * 100)) ;
+const intervalTime = Number(process.argv[4]) ? parseInt(process.argv[4]) : 	Math.ceil(Math.random() * 100);
 
 function loop(){
 	setTimeout(() => {
