@@ -6,7 +6,7 @@ const intervalTime = parseInt(process.argv[4]);
 
 for (var i = 0 ; i < forkCount; i++){
 	process.stdout.write(`Process: ${i} at work`);
-	let childProcess = child.fork('get-request.js',['www.google.com', intervalTime]);
+	let childProcess = child.fork('get-request.js',['www.reddit.com',forkCalls ,intervalTime]);
 
 	childProcess.on('close', (code) => {`child process exited with code ${code}`})
 }
