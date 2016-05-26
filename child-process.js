@@ -3,7 +3,7 @@ const child = require('child_process');
 const forkCount =  parseInt(process.argv[2]);
 const forkCalls =  parseInt(process.argv[3])
 const intervalTime = parseInt(process.argv[4]);
-const targetURI = 'tr.fuelx.com';
+const targetURI = 'www.google.com';
 
 for (var i = 0 ; i < forkCount; i++){
 	process.stdout.write(`Process: ${i} at work`);
